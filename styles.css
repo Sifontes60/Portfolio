@@ -1,0 +1,372 @@
+/*Styling for the Portfolio*/
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  padding:5px;
+  max-width:100%;
+  }
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(196, 196, 196, 0.5);
+
+  }
+  /*Styling for the elements header*/
+  /*includes logo, name, and tag line*/
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    height:30%;
+    padding:20px 0 10px 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(220, 196, 196, 0.5);
+  }
+
+    h1 {
+      color: black;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      letter-spacing:0.3rem ;
+      text-shadow: 10px 5px 10px #cccccc;
+      text-align: center;
+      margin:auto;
+      box-sizing: border-box;
+  }
+    h2 {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 1rem;
+      text-transform:capitalize;
+      text-align: center;
+      color:grey;
+      margin:auto;}
+
+  figure {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+
+}
+
+      /*Styling for the hero image*/
+
+#heroimage{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  align-items: center;
+  justify-content: center;
+  }
+
+.hero-img {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height:auto;
+}
+
+  /*Styling for the folders*/
+
+  #folders {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100%;
+    }
+
+.folder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+    .folder-img {
+        width: 100%;
+        height: auto;
+        }
+
+
+    /* -first breakpoint- Project photos fill screen */
+
+  @media only screen and (min-width: 358px) and (max-width: 419px) {
+    h1{
+        font-size: 1.2em;
+    }
+    #folders {
+        display:block;
+      }
+      figure {
+      align-items: center;
+      border:solid cyan;
+      padding: 10px 0;
+      width:100%;
+      }
+}
+
+/*sencond breakpoint; logo and header align on top*/
+
+    @media only screen and (min-width: 420px) and (max-width: 480px){
+      header {
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        padding-left:5px;
+        padding-right: 5px;
+        }
+
+        h1 {
+          color: black;
+          font-size: 1.2em;
+          text-align: right;
+        }
+        h2 {
+          font-size: .8rem;
+          text-align: right;
+          color:grey;
+        }
+
+    #folders {
+        display:block;
+      }
+      figure {
+      align-items: center;
+      border:solid cyan;
+      padding: 10px 0;
+      width:100%;
+      }
+
+    }
+/*third -intermediate- breakpoint: increase header writing size*/
+@media only screen and (min-width: 465px) and (max-width: 480px){
+
+h1 {
+  color: black;
+  font-size: 1.5em;
+  text-align: right;
+}
+h2 {
+  font-size: 1rem;
+  text-align: right;
+  color:grey;
+}
+}
+/*fourth breakpoint: this is getting ridiculous. */
+@media only screen and (min-width: 481px) and (max-width: 700px){
+  header {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.3em;
+    text-align: right;
+  }
+  h2 {
+    font-size: 1rem;
+    text-align: right;
+    color:grey;
+  }
+  #folders {
+    display:flex;
+    flex-flow: row;
+    align-items: baseline;
+    flex-grow: 100%;
+    flex:center;
+   justify-content: space-around;
+}
+figcaption{
+  font-size: 9px;
+}
+figure {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 0;
+flex-basis:95%;
+justify-content: space-around;
+    }
+
+  .folder-img {
+    border: solid black;
+    width: 100%;
+    height: 100px;
+      }
+}
+/*last breakpoint: space on the sides */
+@media only screen and (min-width: 701px) and (max-width: 969px) {
+
+  header {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding-left: 20px;
+  }
+  h1 {
+    font-size: 2.5em;
+    text-align: right;
+    padding: 10px 10px 0 10px;
+  }
+  h2 {
+    font-size: 1.8rem;
+    text-align: right;
+    padding-right: 10px;
+
+    color:grey;
+  }
+  #heroimage{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    height:auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(220, 196, 196, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+  .hero-img {
+    width:100%;
+    height:auto;
+    image-resolution: snap;
+  }
+  .projects {
+    align-items: center;
+    width:100%;
+    font-size: 2.5 em;
+    text-align: center;
+    flex-wrap: nowrap;
+    background-color: rgba(220, 196, 196, 0.5);
+  }
+  #folders {
+    display:flex;
+    flex-flow: row;
+    align-items: baseline;
+    flex-grow: 90%;
+    flex:center;
+   justify-content: center;
+   width:100%;
+   height: 100%;
+   background-color: rgba(220, 196, 196, 0.5);
+}
+figure {
+display: flex;
+flex-direction: column;
+align-items: center;
+align-self: center;
+font-size-adjust: auto;
+
+width:90%;
+height: 90%;
+justify-content: space-around;
+    }
+a {
+  font-size: 2em;
+  align-content:center;
+}
+.folder-img {
+    border: solid black;
+    width:100%;
+    height: 100%;
+}
+}
+
+@media screen and (min-width: 970px){
+  header {
+    align-items: right;
+    flex-wrap: nowrap;
+    padding: 20px;
+  }
+
+img.my-logo {
+  padding-right: 10px;
+}
+  h1 {
+    font-size: 3em;
+    text-align: right;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  h2 {
+    font-size: 1.8rem;
+    text-align: right;
+    padding-right: 10px;
+
+    color:grey;
+  }
+  #heroimage{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    height:auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(220, 196, 196, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+  .hero-img {
+    width:100%;
+    height:auto;
+    image-resolution: snap;
+  }
+  .projects {
+    align-items: center;
+    width:100%;
+    font-size: 2.5 em;
+    text-align: center;
+    flex-wrap: nowrap;
+    background-color: rgba(220, 196, 196, 0.5);
+  }
+  #folders {
+    display:flex;
+    flex-flow: row;
+    align-items: baseline;
+    flex-grow: 90%;
+    flex:center;
+   justify-content: center;
+   width:100%;
+   height: 100%;
+   background-color: rgba(220, 196, 196, 0.5);
+   padding-bottom: 50px;
+  }
+  figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  font-size-adjust: auto;
+
+  width:90%;
+  height: 90%;
+  justify-content: space-around;
+    }
+  a {
+  font-size: 2em;
+  align-content:center;
+  }
+  .folder-img {
+    border: solid black;
+    width:100%;
+    height: 100%;
+  }
+
+}
